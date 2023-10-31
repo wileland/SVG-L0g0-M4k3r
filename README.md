@@ -60,3 +60,5 @@ Coming soon!
 
 ---
 
+Walkthrough video: https://drive.google.com/file/d/1L9FiGQp2RF9VFvr4ijjde7YG9S-Svv2X/view?usp=sharing
+
