@@ -1,5 +1,4 @@
-const Circle = require('./lib/Circle'); // Adjust the import path as needed
-const { describe, it, expect } = require('@jest/globals');
+import Circle from './lib/Circle'; // Use ES6 import syntax for Circle
 
 describe('Circle Class', () => {
   it('should set the color correctly', () => {

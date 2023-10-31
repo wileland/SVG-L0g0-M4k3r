@@ -1,5 +1,4 @@
-const Triangle = require('./lib/Triangle'); // 
-const { describe, it, expect } = require('@jest/globals');
+import Triangle from './Triangle'; // Use ES6 import syntax for Triangle
 
 describe('Triangle Class', () => {
   it('should set the color correctly', () => {
