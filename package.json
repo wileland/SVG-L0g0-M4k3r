@@ -2,31 +2,22 @@
   "name": "svg-logo-maker",
   "version": "1.0.0",
   "description": "A tool for creating SVG logos.",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "test": "jest",
-    "start": "node server.js"
+    "test": "jest"
   },
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^8.0.3",
-    "fs": "^0.0.1" // fs is a built-in module and doesn't need to be added as a dependency
+    "inquirer": "^8.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
-    "@babel/preset-env": "^7.23.2",
-    "babel-jest": "^27.5.1",
     "esm": "^3.2.25",
     "jest": "^27.5.1"
   },
   "jest": {
     "testEnvironment": "node",
-    "testMatch": ["**/*.test.js"],
-    "setupFilesAfterEnv": ["./jest.setup.js"],
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
-    "moduleFileExtensions": ["js", "json", "node"]
+    "testMatch": ["**/*.test.mjs"], // Change the pattern to match .test.mjs files
+    "moduleFileExtensions": ["js", "json", "mjs"] // Add "mjs" as a module file extension
   }
 }
