@@ -17,7 +17,7 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testMatch": ["**/*.test.mjs"], // Change the pattern to match .test.mjs files
-    "moduleFileExtensions": ["js", "json", "mjs"] // Add "mjs" as a module file extension
+    "testMatch": ["**/*.test.mjs"], 
+    "moduleFileExtensions": ["js", "json", "mjs"] 
   }
 }
