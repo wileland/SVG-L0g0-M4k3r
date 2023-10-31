@@ -4,6 +4,8 @@ import Triangle from './lib/Triangle.mjs';
 import Square from './lib/Square.mjs';
 import fs from 'fs/promises';
 
+const isHexColor = (color) => /^#([0-9A-F]{3}){1,2}$/i.test(color);
+
 const getUserInput = async () => {
   return inquirer.prompt([
     {
@@ -21,6 +23,12 @@ const getUserInput = async () => {
       type: 'input',
       name: 'textColor',
       message: 'Enter text color (color name or hexadecimal):',
+      validate: (color) => {
+        if (!isHexColor(color) && !/^([a-zA-Z]+)$/.test(color)) {
+          return 'Enter a valid color name or hexadecimal color value.';
+        }
+        return true;
+      },
     },
     {
       type: 'list',
@@ -32,6 +40,18 @@ const getUserInput = async () => {
       type: 'input',
       name: 'shapeColor',
       message: 'Enter shape color (color name or hexadecimal):',
+      validate: (color) => {
+        if (!isHexColor(color) && !/^([a-zA-Z]+)$/.test(color)) {
+          return 'Enter a valid color name or hexadecimal color value.';
+        }
+        return true;
+      },
+    },
+    {
+      type: 'input',
+      name: 'outputPath',
+      message: 'Enter the path to save the logo (default: ./examples/logo.svg):',
+      default: './examples/logo.svg',
     },
   ]);
 };
@@ -80,10 +100,9 @@ const main = async () => {
       userInput.textColor
     );
 
-    const svgFilePath = './examples/logo.svg';
-    await saveSVGToFile(svgLogo, svgFilePath);
+    await saveSVGToFile(svgLogo, userInput.outputPath);
 
-    console.log('Generated logo.svg');
+    console.log(`Generated logo at ${userInput.outputPath}`);
   } catch (error) {
     console.error('Error:', error);
   }

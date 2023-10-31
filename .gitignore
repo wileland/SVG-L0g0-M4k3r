@@ -1,0 +1,18 @@
+# Node related
+node_modules/
+npm-debug.log
+
+# System related
+.DS_Store
+Thumbs.db
+
+# IDE related
+.vscode/
+.idea/
+
+# Generated content
+examples/logo.svg
+
+# Other
+*.log
+*.swp
