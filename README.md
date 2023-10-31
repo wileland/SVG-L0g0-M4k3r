@@ -60,4 +60,3 @@ Coming soon!
 
 ---
 
-Make sure to replace `your-username` with your actual GitHub username if you're planning to host this project on GitHub. Adjust other parts as you see fit!
