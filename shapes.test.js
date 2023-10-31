@@ -1,5 +1,5 @@
 // Triangle Class
-const Triangle = require('./lib\Triangle.js'); 
+const Triangle = require('./lib/Triangle'); 
 describe('Triangle Class', () => {
   it('should set the color correctly', () => {
     const triangle = new Triangle();
@@ -17,6 +17,7 @@ describe('Triangle Class', () => {
   });
 });
 // Circle Class
+const Circle = require('./lib/Circle'); 
 describe('Circle Class', () => {
     it('should set the color correctly', () => {
       const circle = new Circle();
@@ -34,6 +35,7 @@ describe('Circle Class', () => {
     });
   });
   // Square Test
+  const Square = require('./lib/Square'); 
   describe('Square Class', () => {
     it('should set the color correctly', () => {
       const square = new Square();
