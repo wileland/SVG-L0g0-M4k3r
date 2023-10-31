@@ -1,26 +1,25 @@
 {
   "name": "svg-logo-maker",
   "version": "1.0.0",
-  "description": "SVG Logo Maker",
+  "description": "A tool for creating SVG logos.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "jest": {
-    "preset": "ts-jest/presets/js-with-babel"
-  },
-  "dependencies": {
-    "inquirer": "^8.0.2" // Add other dependencies needed here
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.7",
-    "babel-jest": "^27.4.7",
-    "jest": "^27.4.7",
-    "ts-jest": "^28.0.3",
-    "typescript": "^4.5.5" // Add other dev dependencies needed here
-  },
-  "keywords": [],
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "babel-jest": "^27.4.7",
+    "jest": "^27.4.7"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/*.test.js"],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleFileExtensions": ["js", "json", "node"]
+  }
 }
